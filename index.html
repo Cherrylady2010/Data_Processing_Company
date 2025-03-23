@@ -44,7 +44,7 @@
                   <h1 class="main__title">
                     Many reasons to get up and start to get back in the business
                   </h1>
-                  <p class="secondary__text">
+                  <p id="secondary__text">
                     The harder you work for something, the greater you’ll feel
                     when you achieve it.
                   </p>
@@ -63,7 +63,7 @@
                   class="video__picture"
                 />
                 <div class="video__text__container">
-                  <p class="secondary__text">
+                  <p class="secondary__text" id="secondary__text">
                     The harder you work for something, the greater you’ll feel
                     when you achieve it.
                   </p>
@@ -93,6 +93,10 @@
         </div>
         <div class="grid__container">
           <div class="grid-elem">
+            <img
+              src="./assets/images/Flip-horizontal.png"
+              alt="Flip-horizontal"
+            />
             <div class="grid-elem-text-block">
               <p class="grid__title" id="first__card">Ecstatic elegance</p>
 
@@ -103,6 +107,7 @@
             </div>
           </div>
           <div class="grid-elem">
+            <img src="./assets/images/Airpods.png" alt="Airpods" />
             <div class="grid-elem-text-block">
               <p id="grid__title-two">Folly words widow</p>
               <p>Effect if in no depend seemed.</p>
@@ -111,6 +116,7 @@
             </div>
           </div>
           <div class="grid-elem">
+            <img src="/assets/images/LTE.png" alt="LTE" class="card__img" />
             <div class="grid-elem-text-block">
               <p class="grid__title">Possible procured trifling</p>
               <p>We may rent been what.</p>
@@ -118,6 +124,7 @@
             </div>
           </div>
           <div class="grid-elem" id="third__card">
+            <img src="./assets/images/Thunder-move.png" alt="Thunder-move" />
             <div class="grid-elem-text-block">
               <p class="grid__title">Open game</p>
               <p>Shy merits say advice ten before lovers innate add.</p>
@@ -125,6 +132,7 @@
             </div>
           </div>
           <div class="grid-elem">
+            <img src="./assets/images/Attachment.png" alt="Attachment" />
             <div class="grid-elem-text-block">
               <p class="grid__title">Endeavor</p>
               <p>Shy merits say advice ten before lovers innate add.</p>
@@ -132,6 +140,7 @@
             </div>
           </div>
           <div class="grid-elem">
+            <img src="./assets/images/Bulb.png" alt="Bulb" />
             <div class="grid-elem-text-block">
               <p class="grid__title">Comfort pursuit</p>
               <p>We may rent been what.</p>
@@ -187,20 +196,20 @@
             </p>
           </div>
           <div class="three__simple__ways">
-            <div>
+            <div class="first__block">
               <h2 class="three__ways__title">100+</h2>
               <p class="secondary__text" id="secondary__text__two">
                 5 Reasons To Purchase Desktop Computers
               </p>
             </div>
-            <div>
+            <div class="first__block">
               <h2 class="three__ways__title">43,000+</h2>
               <p class="secondary__text" id="secondary__text__three">
                 3 Simple Ways To Save A Bunch Of Money When Buying A New
                 Computer
               </p>
             </div>
-            <div>
+            <div class="first__block">
               <h2 class="three__ways__title">30+</h2>
               <p class="secondary__text" id="secondary__text__four">
                 A Discount Toner Cartridge Is Better Than Ever And You Will Save
@@ -216,14 +225,12 @@
             Create your <span>next project</span> with startup framework
           </h2>
           <div class="button__container">
-            <button class="orange__button" id="orange__button__two">
+            <button class="orange__button" id="orange__button">
               Get Started
             </button>
           </div>
         </div>
-        <div class="img">
-          <img src="/assets/images/Frame (6).png" alt="Frame (6)" />
-        </div>
+        <img src="/assets/images/Frame (6).png" alt="Frame (6)" class="img" />
       </section>
       <section>
         <div class="container__for__different__blocks">
@@ -240,13 +247,27 @@
               Learn More
             </button>
           </div>
+          <div id="block">
+            <div class="green__container" id="green__container">
+              <img
+                src="/assets/images/Path.png"
+                alt="Path"
+                class="arrow__img"
+                id="arrow__img"
+              />
+            </div>
+          </div>
           <div class="card">
             <img src="/assets/images/Rectangle 3.png" alt="Rectangle 3" />
             <div class="card__text__container">
-              <h2>Omah mukti residence</h2>
-              <p class="dark__gray__text">Merpati sidomuncul 26 street, UK</p>
-              <h2 class="dark__green__title">$176,000</h2>
-              <p class="light__gray__text">Funding Request</p>
+              <div>
+                <h2 class="card__title">Omah mukti residence</h2>
+                <p class="dark__gray__text">Merpati sidomuncul 26 street, UK</p>
+              </div>
+              <div>
+                <h2 class="dark__green__title">$176,000</h2>
+                <p class="light__gray__text">Funding Request</p>
+              </div>
               <hr class="card__line" />
               <div class="card__container">
                 <div>
@@ -264,18 +285,39 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="lilac__block">
-          <div class="lilac__container">
-            <p class="text__white">6 month</p>
-            <p id="text__white">increase 12%</p>
+          <div class="lilac__block">
+            <div class="lilac__container">
+              <p class="text__white">6 month</p>
+              <p id="text__white">increase 12%</p>
+            </div>
           </div>
         </div>
       </section>
       <section>
         <div class="info__online__container">
-          <img src="/assets/images/Bitmap.png" alt="Bitmap" />
+          <div class="dots__container">
+            <img
+              src="/assets/images/Group 8.png"
+              alt="Group 8"
+              class="dots__picture"
+            />
+            <div class="img__container">
+              <div class="figures__container">
+                <div class="navy__figure"></div>
+                <div class="turquoise__figure"></div>
+              </div>
+              <img
+                src="/assets/images/Bitmap.png"
+                alt="Bitmap"
+                class="bitmap"
+              />
+            </div>
+            <img
+              src="/assets/images/Group 2.png"
+              alt="Group 2"
+              class="dots__picture__two"
+            />
+          </div>
           <div class="help__container">
             <h2 class="another__green__title">
               Help Finding Information Online
@@ -287,6 +329,7 @@
 
             <div class="features__container">
               <div>
+                <img src="./assets/images/Swiss-knife.png" alt="Swiss-knife" />
                 <p class="feature__one">Feature One</p>
                 <p class="secondary__text" id="another__secondary__text">
                   Fully customizable and neatly organized components will help
@@ -294,6 +337,11 @@
                 </p>
               </div>
               <div>
+                <img
+                  src="./assets/images/LTE.png"
+                  alt="LTE"
+                  class="card__img"
+                />
                 <p class="feature__two">Feature Two</p>
                 <p class="secondary__text" id="another__secondary__text">
                   Fully customizable and neatly organized components will help
@@ -323,48 +371,48 @@
     <footer class="footer">
       <div class="footer__title__container">
         <h2 class="ARShakir">ARShakir</h2>
-        <div class="circle__block__container">
-          <div class="circle__block">
-            <div class="circle__img">
+        <ul class="circle__block__container">
+          <li class="circle__block">
+            <a href="#">
               <img src="/assets/icons/google.png" alt="google" />
-            </div>
-          </div>
-          <div class="circle__block">
-            <div class="circle__img">
+            </a>
+          </li>
+          <li class="circle__block">
+            <a href="#">
               <img src="/assets/icons/twitter.png" alt="twitter" />
-            </div>
-          </div>
-          <div class="circle__block">
-            <div class="circle__img">
+            </a>
+          </li>
+          <li class="circle__block">
+            <a href="#">
               <img src="/assets/icons/facebook.png" alt="facebook" />
-            </div>
-          </div>
-        </div>
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="footer__list">
         <ul class="white__list">
-          <li><a href="#">First </a></li>
+          <li class="title__number"><a href="#">First </a></li>
           <li><a href="#">First page</a></li>
           <li><a href="#">Second page</a></li>
           <li><a href="#">Third page</a></li>
           <li><a href="#">Fourth page</a></li>
         </ul>
         <ul class="white__list">
-          <li><a href="#">Second</a></li>
+          <li class="title__number"><a href="#">Second</a></li>
           <li><a href="#">First page</a></li>
           <li><a href="#">Second page</a></li>
           <li><a href="#">Third page</a></li>
           <li><a href="#">Fourth page</a></li>
         </ul>
         <ul class="white__list">
-          <li><a href="#">Third</a></li>
+          <li class="title__number"><a href="#">Third</a></li>
           <li><a href="#">First page</a></li>
           <li><a href="#">Second page</a></li>
           <li><a href="#">Third page</a></li>
           <li><a href="#">Fourth page</a></li>
         </ul>
         <ul class="white__list">
-          <li><a href="#">Fourth</a></li>
+          <li class="title__number"><a href="#">Fourth</a></li>
           <li><a href="#">First page</a></li>
           <li><a href="#">Second page</a></li>
           <li><a href="#">Third page</a></li>
