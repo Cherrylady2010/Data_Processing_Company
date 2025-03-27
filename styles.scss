@@ -36,6 +36,10 @@ $navy-violet-color:#303060;
     display: flex;
     justify-content: space-between;
     padding: 79px 179px 0 179px;
+    @media (max-width:768px) {
+        padding: 50px 0 0 50px;
+        gap: 50px;
+    }
     @media (max-width:320px) {
         padding: 15px;
         display: block;
@@ -303,19 +307,18 @@ span {
 }
 .photo {
     width: 286px;
-height: 357px;
-background-image: url("./assets/images/Photo.png");
-display: flex;
-justify-content: end;
+    height: 357px;
+    background-image: url("./assets/images/Photo.png");
+    display: flex;
+    justify-content: end;
   @media (max-width:320px) {
     width: 900px;
     height: 300px;
   }
 }
 .photos__container {
-    display: flex;
-    width: 820px;
-    height: 387px;
+  display: grid;
+  grid-template-columns: 232px 400px 139px;
     @media (max-width:320px) {
         width: 300px;
         height: 550px;
@@ -337,6 +340,10 @@ justify-content: end;
     justify-content: center;
     @media (max-width:320px) {
         display: block;
+    }
+    @media (max-width:768px) {
+        display: block;
+        padding: 50px 0 0 50px;
     }
 }
 .green__container {
@@ -374,11 +381,15 @@ justify-content: end;
 .three__simple__ways {
     display: flex;
     justify-self: center;
+    justify-content: space-between;
     margin-top: 48px;
     @media (max-width:320px) {
         display: grid;
         grid-template-columns: 1fr;
 
+    }
+    @media (max-width:768px) {
+        gap: 50px;
     }
 }
 .three__simple__ways__container {
@@ -389,10 +400,10 @@ justify-content: end;
     font-size: 36px;
     text-align: center;
     color:$turquoise-color;
-    width: 610px;
-    @media (max-width:320px) {
-        width: 320px;
+    @media (max-width:768px) {
+       
     }
+   
 }
 .container__three__ways {
     align-self: center;
@@ -452,6 +463,9 @@ justify-content: end;
 .container__for__different__blocks {
     display: flex;
     justify-self: center;
+    @media (max-width:768px) {
+        justify-self: start;
+    }
     @media (max-width:320px) {
         display: block;
     }

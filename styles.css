@@ -1,7 +1,7 @@
 .circle {
   height: 36px;
   width: 36px;
-  background-color: #F2994A;
+  background-color: #f2994a;
   border-radius: 50px;
 }
 
@@ -25,6 +25,12 @@
   display: flex;
   justify-content: space-between;
   padding: 79px 179px 0 179px;
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 50px 0 0 50px;
+    gap: 50px;
+  }
 }
 @media (max-width: 320px) {
   .header {
@@ -65,7 +71,7 @@
 
 a {
   text-decoration: none;
-  color: #B5B5B5;
+  color: #b5b5b5;
 }
 
 #orange__button {
@@ -76,8 +82,8 @@ a {
 .orange__button {
   width: 112px;
   height: 36px;
-  background-color: #F2994A;
-  border: 1px solid #F2994A;
+  background-color: #f2994a;
+  border: 1px solid #f2994a;
   border-radius: 5px;
   color: white;
   text-transform: uppercase;
@@ -85,23 +91,23 @@ a {
   cursor: pointer;
 }
 .orange__button:hover {
-  background: linear-gradient(0deg, #d87016 0%, #F2994A 100%);
+  background: linear-gradient(0deg, #d87016 0%, #f2994a 100%);
   box-shadow: -11px 18px 37px 0 rgba(242, 153, 74, 0.23);
 }
 
 .transparent__button {
   width: 112px;
   height: 36px;
-  border: 1px solid #F2994A;
+  border: 1px solid #f2994a;
   background-color: transparent;
-  color: #F2994A;
+  color: #f2994a;
   border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 0.17em;
   cursor: pointer;
 }
 .transparent__button:hover {
-  background: linear-gradient(0deg, #3B1D60 0%, #F2994A 100%);
+  background: linear-gradient(0deg, #3b1d60 0%, #f2994a 100%);
   color: white;
 }
 
@@ -166,7 +172,7 @@ a {
 
 .secondary__text {
   width: 468px;
-  color: #8476AA;
+  color: #8476aa;
   font-weight: 600;
 }
 @media (max-width: 320px) {
@@ -277,7 +283,7 @@ a {
 .grid-elem {
   height: 150px;
   width: 299px;
-  color: #8476AA;
+  color: #8476aa;
   font-weight: 600;
 }
 @media (max-width: 320px) {
@@ -341,7 +347,7 @@ a {
 }
 
 span {
-  color: #F2994A;
+  color: #f2994a;
 }
 
 .overview {
@@ -375,9 +381,8 @@ span {
 }
 
 .photos__container {
-  display: flex;
-  width: 820px;
-  height: 387px;
+  display: grid;
+  grid-template-columns: 232px 400px 139px;
 }
 @media (max-width: 320px) {
   .photos__container {
@@ -407,11 +412,17 @@ span {
     display: block;
   }
 }
+@media (max-width: 768px) {
+  .container {
+    display: block;
+    padding: 50px 0 0 50px;
+  }
+}
 
 .green__container {
   width: 89px;
   height: 80px;
-  background-color: #13C296;
+  background-color: #13c296;
   display: flex;
   align-self: end;
   justify-content: center;
@@ -450,12 +461,18 @@ span {
 .three__simple__ways {
   display: flex;
   justify-self: center;
+  justify-content: space-between;
   margin-top: 48px;
 }
 @media (max-width: 320px) {
   .three__simple__ways {
     display: grid;
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .three__simple__ways {
+    gap: 50px;
   }
 }
 
@@ -469,14 +486,7 @@ span {
   font-size: 36px;
   text-align: center;
   color: #99efd0;
-  width: 610px;
 }
-@media (max-width: 320px) {
-  .three__ways__title {
-    width: 320px;
-  }
-}
-
 .container__three__ways {
   align-self: center;
   gap: 32px;
@@ -488,7 +498,7 @@ span {
   text-align: center;
   display: flex;
   align-self: center;
-  color: #8476AA;
+  color: #8476aa;
   font-weight: 600;
 }
 
@@ -550,6 +560,11 @@ span {
   display: flex;
   justify-self: center;
 }
+@media (max-width: 768px) {
+  .container__for__different__blocks {
+    justify-self: start;
+  }
+}
 @media (max-width: 320px) {
   .container__for__different__blocks {
     display: block;
@@ -564,7 +579,7 @@ span {
 }
 
 .lilac__block {
-  background-color: #516EA9;
+  background-color: #516ea9;
   width: 130px;
   height: 65px;
   border-radius: 10px;
@@ -596,7 +611,7 @@ span {
   width: 200px;
   display: flex;
   justify-self: center;
-  border: 1px solid #D6DBDF;
+  border: 1px solid #d6dbdf;
 }
 
 .card__container {
@@ -605,7 +620,7 @@ span {
 }
 
 .light__gray__text {
-  color: #98A4AF;
+  color: #98a4af;
   text-transform: uppercase;
   font-size: 10px;
   letter-spacing: 0.05em;
@@ -648,7 +663,7 @@ span {
 }
 
 .dark__green__title {
-  color: #13C296;
+  color: #13c296;
   font-size: 24px;
   font-weight: 400;
 }
@@ -722,7 +737,7 @@ span {
 .email__container {
   height: 324px;
   width: 940px;
-  background-color: #181A50;
+  background-color: #181a50;
   justify-self: center;
   border-radius: 5px;
   padding: 50px 0 0 0;
@@ -738,7 +753,7 @@ span {
 }
 
 .orange__title {
-  color: #F2994A;
+  color: #f2994a;
   font-size: 34px;
   text-align: center;
 }
@@ -766,13 +781,13 @@ span {
 }
 
 .secondary__text__two {
-  color: #95A1BB;
+  color: #95a1bb;
   text-align: center;
   font-weight: 600;
 }
 
 .secondary__text__three {
-  color: #8476AA;
+  color: #8476aa;
   text-align: center;
   font-weight: 600;
 }
@@ -823,11 +838,11 @@ li {
   display: flex;
   justify-content: center;
   gap: 34px;
-  color: #8D8D8D;
+  color: #8d8d8d;
 }
 
 .ARShakir {
-  color: #F2994A;
+  color: #f2994a;
 }
 
 .circle__block {
@@ -904,7 +919,7 @@ li {
 .navy__figure {
   width: 120px;
   height: 120px;
-  border: 1px solid #3056D3;
+  border: 1px solid #3056d3;
   border-top-left-radius: 110px;
   position: relative;
   top: 40px;
@@ -915,7 +930,7 @@ li {
   width: 68px;
   height: 68px;
   border-top-right-radius: 100px;
-  background-color: #13C296;
+  background-color: #13c296;
   position: relative;
   left: 40px;
   z-index: -2;
@@ -984,4 +999,4 @@ li {
 
 .title__number {
   font-weight: 700;
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */
