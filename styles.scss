@@ -1,5 +1,6 @@
 $padding:0;
 $margin:0;
+//Цвета
 $main-background:#0F1145;
 $orange-color: #F2994A;
 $white-color:white;
@@ -7,7 +8,22 @@ $turquoise-color:#99efd0;
 $deep-turquoise-color:#13C296;
 $lilac-color:#8476AA;
 $navy-violet-color:#303060;
-
+//Медиа
+$breakpoint-laptop:1200px;
+$breakpoint-tablet:768px;
+$breakpoint-mobile:320px;
+    
+@mixin media ($breakpoint) {
+    @media(max-width:$breakpoint) {
+        @content;
+    }
+}
+.wrapper {
+    max-width: 1900px;
+    @include media ($breakpoint-mobile) {
+        max-width: 320px;
+       }
+}
 .circle {
     height: 36px;
     width: 36px;
@@ -50,22 +66,46 @@ $navy-violet-color:#303060;
         align-items: center;
         gap: 20px;
     }
+    @include media ($breakpoint-tablet) {
+        padding: 20px 10px 0 10px;
+       }
 }
-.header__left__block {
+.header__links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+    text-transform: uppercase;
+    letter-spacing: 0.17em;
+    font-weight: 500;
+    @include media ($breakpoint-tablet) {
+        display: block;
+       }
+  }
+.header__leftBlock {
     display: flex;
     gap: 44px;
+    @include media ($breakpoint-tablet) {
+        gap: 28px;
+        text-align: center;
+       }
 }
+.header__buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include media ($breakpoint-tablet) {
+       flex-direction: column;
+       gap: 20px;
+       }
+  }
 a {
     text-decoration: none;
     color: #B5B5B5;
 }
-#orange__button {
-    width: 150px;
-    height: 50px;
-}
 .orange__button {
-    width: 112px;
-    height: 36px;
+    width:max-content ;
+    padding: 10px 26px 10px 26px;
     background-color: $orange-color;
     border:1px solid $orange-color;
     border-radius: 5px;
@@ -80,12 +120,10 @@ a {
     }
 }
 #orange__btn__two {
-    width: 164px;
-    height: 54px;
+    padding: 18px 31px 18px 31px;
 }
 .transparent__button {
-    width: 157px;
-    height: 46px;
+    padding: 18px 57px 18px 57px;
     border: 1px solid $orange-color;
     background-color: transparent;
     color: $orange-color;
@@ -97,25 +135,34 @@ a {
         background: linear-gradient(0deg,#3B1D60 0%, #F2994A 100%);
         color: $white-color;
     }
+    @include media ($breakpoint-mobile) {
+       padding: 17px 19px 17px 19px;
+        }
 }
 #transparent__btn {
-    width: 112px;
-    height: 36px;
+    padding: 10px 26px 10px 26px;
 }
 #learn__more__btn {
-    width: 157px;
-    height: 46px;
+   padding: 17px 31px 17px 31px;
+   @include media ($breakpoint-tablet) {
+    padding: 18px 40px 17px 40px;
+    font-size: 12px;
+    }
+}
+.main__text {
+    color: $lilac-color;
+    font-weight: 600;
+    font-size: 19px;
 }
 .main__container {
-    height: 710px;
     padding: 0 180px 0 180px;
     margin-top: 104px;
-    @media (max-width:1035px) {
+    @include media ($breakpoint-laptop) {
         padding: 0 0 0 21px;
     }
-    @media (max-width:320px) {
+    @include media ($breakpoint-mobile) {
         padding: 12px;
-        height: 700px;
+        margin-top: 30px;
     }
 }
 .common__container {
@@ -139,13 +186,11 @@ a {
 }
 
 .main__title {
-    width: 451px;
     font-size: 44px;
     color: $turquoise-color;
-    @media (max-width:320px) {
-        font-size: 30px;
-        width: 300px;
-    }
+    @include media ($breakpoint-tablet) {
+        font-size: 25px;
+       }
 }
 .main__img {
     width: 723px;
@@ -154,13 +199,15 @@ a {
        display: none;
     }
 }
+.choice {
+    margin-top: 50px;
+}
 .secondary__text {
-    width: 468px;
     color: $lilac-color;
     font-weight: 600;
-    @media (max-width:320px) {
-        width: 280px;
-    }
+    @include media ($breakpoint-tablet) {
+        text-align: center;
+       }
 }
 .video__picture {
     width: 140px;
@@ -185,37 +232,11 @@ a {
 }
 .text__preview {
     color: #6d6d78;
+    @include media ($breakpoint-mobile) {
+        text-align: center;
+    }
 }
-.first__brand {
-    background-image: url("./assets/images/Frame\ \(7\).png");
-    width: 117px;
-    height: 25px;
-}
-.second__brand {
-    background-image: url("./assets/images/Appcues-2.png");
-    width: 117px;
-    height: 25px;
-}
-.third__brand {
-    background-image: url("./assets/images/Shipbob-2.png");
-    width: 92px;
-    height: 25px;
-}
-.fourth__brand {
-    background-image: url("./assets/images/Bench-2.png");
-    width: 106px;
-    height: 25px;
-}
-.fifth__brand {
-    background-image: url("./assets/images/bubbly-2.png");
-    width: 55px;
-    height: 25px;
-}
-.sixth__brand {
-    background-image: url("./assets/images/demio-2.png");
-    width: 117px;
-    height: 25px;
-}
+
 .brands__container {
     display: flex;
     justify-content: center;
@@ -223,49 +244,44 @@ a {
     @media(max-width:1035px){
         gap: 24px;
     }
-    @media (max-width:753px) {
+    @include media ($breakpoint-tablet) {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
-        max-width: 400px;
-    }
-    @media (max-width:320px) {
-        
-    }
+        margin-top: 50px;
+       }
+
 }
 .grid__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    height: 282px;
-    max-width: 997px;
-    margin: 0 auto;
+    grid-template-columns: 350px 350px 350px;
+    padding: 0 400px 0;
     margin-top: 50px;
-    @media (max-width:320px) {
-       display: grid;
-       grid-template-columns: 1fr;
-       height: 982px;
-    }
+    row-gap: 35px;
+    @include media ($breakpoint-mobile) {
+        grid-template-columns: 1fr;
+        }
+        @include media ($breakpoint-tablet) {
+           grid-template-columns: 1fr 1fr;
+           padding: 0;
+            }
 }
 .grid-elem {
-    height: 150px;
-    width: 299px;
     color: $lilac-color;
     font-weight: 600;
     display: flex;
     gap: 24px;
-    @media (max-width:320px) {
+    @include media ($breakpoint-mobile) {
+        display: block;
         text-align: center;
-    }
+        }
+        
 }
 .grid-elem-text-block {
     gap: 10px;
     @include flex-column;
 }
 .grid-elem-img {
-    height: 24px;
-    width: 24px;
-}
-.card__img {
     height: 24px;
     width: 24px;
 }
@@ -292,26 +308,20 @@ a {
     }
 }
 .traffic__container {
-    height: 700px;
     @include flex-column;
     justify-content: center;
-    @media (max-width:320px) {
-        height: 850px;
-    }
 }
 .green__title {
     color: $turquoise-color;
     font-size: 42px;
-    width: 400px;
-    @media (max-width:320px) {
-        width: 310px;
+    @include media ($breakpoint-tablet) {
+        font-size: 36px;
     }
 }
 span {
     color: $orange-color;
 }
 .overview {
-    background-image: url('./assets/images/Group.png');
     width: 232px;
     height: 225px;
     position: relative;
@@ -329,18 +339,9 @@ span {
     background-image: url("./assets/images/Photo.png");
     display: flex;
     justify-content: end;
-  @media (max-width:320px) {
-    width: 900px;
-    height: 300px;
-  }
-}
-.photos__container {
-  display: grid;
-  grid-template-columns: 232px 400px 139px;
-    @media (max-width:320px) {
-        width: 300px;
-        height: 550px;
-        display: block;
+  
+    @include media ($breakpoint-tablet) {
+       justify-self: center;
     }
 }
 .transparent__img {
@@ -357,12 +358,9 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (max-width:320px) {
+    @include media ($breakpoint-mobile) {
         display: block;
-    }
-    @media (max-width:768px) {
-        display: block;
-        padding: 50px 0 0 50px;
+        padding: 0;
     }
 }
 .green__container {
@@ -378,9 +376,8 @@ span {
     &:hover {
         box-shadow: -11px 16px 25px 0 rgba(19, 194, 150, 0.24);
     }
-    @media (max-width:320px) {
-        width: 300px;
-        right: 200px;
+    @include media ($breakpoint-mobile) {
+        right: 0;
     }
 }
 .arrow__img {
@@ -412,6 +409,7 @@ span {
     }
 }
 .three__simple__ways__container {
+    margin-top: 50px;
     justify-self: center;
     @include flex-column;
     min-width: 1091px;
@@ -420,16 +418,16 @@ span {
     font-size: 36px;
     text-align: center;
     color:$turquoise-color;
-    @media (max-width:768px) {
-       
+    @include media ($breakpoint-mobile) {
+        font-size: 21px;
     }
    
 }
 .container__four {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 70px 1fr;
     margin-top: 169px;
+    @include media ($breakpoint-mobile) {
+       margin-top: 50px;
+    }
 }
 .container__three__ways {
     align-self: center;
@@ -440,6 +438,9 @@ span {
     display: flex;
     color: $lilac-color;
     font-weight: 600;
+    @include media ($breakpoint-tablet) {
+        text-align: center;
+       }
 }
 #secondary__text__two {
     width: 179px;
@@ -464,11 +465,9 @@ span {
     text-align: center;
 }
 #green__title {
-    width: 800px;
     text-align: center;
     @media (max-width:320px) {
         font-size: 30px;
-        width: 320px;
     }
 }
 .img {
@@ -580,19 +579,21 @@ span {
     font-weight: 400;
 }
 .card__text__container {
-    padding: 20px 20px 30px 29px;
+    padding: 20px 20px 16px 29px;
     gap: 20px;
     @include flex-column;
 }
 .card__img {
     height: 36px;
     width: 36px;
+    @include media ($breakpoint-mobile) {
+        justify-content: center;
+    }
 }
-.feature__one {
+.feature__title {
     color: $turquoise-color;
-}
-.feature__two {
-    color: $turquoise-color;
+    font-weight: 700;
+    letter-spacing: 0.01em;
 }
 .another__green__title {
     font-size: 26px;
@@ -605,7 +606,6 @@ span {
     }
 }
 #another__secondary__text {
-    width: 254px;
     font-weight: 600;
 }
 .info__online__container {
@@ -647,6 +647,9 @@ span {
     color: $orange-color;
     font-size: 34px;
     text-align: center;
+    @include media ($breakpoint-mobile) {
+        font-size: 29px;
+    }
 }
 .email {
     width: 288px;
@@ -698,6 +701,9 @@ li {
 }
 .ARShakir {
     color: $orange-color;
+    @include media ($breakpoint-mobile) {
+        text-align: center;
+       }
 }
 .circle__block {
     background-color: $navy-violet-color;
@@ -719,9 +725,14 @@ li {
     display: flex;
     justify-self: center;
 }
-.footer__title__container {
+.footer__titleContainer {
     display: flex;
     justify-content: space-between;
+    @include media ($breakpoint-tablet) {
+        @include flex-column;
+        align-self: center;
+        gap: 20px;
+       }
 }
 .footer {
     padding: 0 248px 99px 200px;
@@ -737,6 +748,14 @@ li {
         gap: 34px;
         color: #8D8D8D;
     }
+    @include media ($breakpoint-tablet) {
+        padding: 0 0 20px;
+       }
+}
+.choice__title {
+    font-size: 42px;
+    text-align: center;
+    color: $turquoise-color;
 }
 .cards__title__container {
     align-items: center;
@@ -756,6 +775,7 @@ li {
     height: 256px;
     position: relative;
     left: 40px;
+    z-index: -2;
     @media (max-width:320px) {
         display: none;
     }
@@ -785,6 +805,28 @@ li {
         width: 310px;
     }
 }
+.footer__list {
+    display: flex;
+    justify-content: space-between;
+    @include media ($breakpoint-tablet) {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 100px;
+        align-self: center;
+        text-align: center;
+       }
+  }
+  
+.footer__container {
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+    color: #8D8D8D;
+    @include media ($breakpoint-tablet) {
+       display: block;
+       text-align: center;
+       }
+  }
 .dots__container {
     display: flex;
     @media (max-width:320px) {
