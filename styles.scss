@@ -18,8 +18,12 @@ $breakpoint-mobile:320px;
         @content;
     }
 }
+.moneyCard {
+    position: relative;
+}
 .wrapper {
-    max-width: 1900px;
+    max-width: 1000px;
+    margin: 0 auto;
     @include media ($breakpoint-mobile) {
         max-width: 320px;
        }
@@ -119,7 +123,7 @@ a {
         box-shadow: -11px 18px 37px 0 rgba(242, 153, 74, 0.23);
     }
 }
-#orange__btn__two {
+#orangeBtn__two {
     padding: 18px 31px 18px 31px;
 }
 .transparent__button {
@@ -142,7 +146,7 @@ a {
 #transparent__btn {
     padding: 10px 26px 10px 26px;
 }
-#learn__more__btn {
+#learnMore__btn {
    padding: 17px 31px 17px 31px;
    @include media ($breakpoint-tablet) {
     padding: 18px 40px 17px 40px;
@@ -172,15 +176,15 @@ a {
        display: block;
     }
 }
-.main__text__btn__container {
+.main__itemsContainer {
     gap: 40px;
     @include flex-column;
 }
-.text__btn__video__container {
+.main__Containers {
     @include flex-column;
     gap: 60px;
 }
-.main__text__container {
+.main__textContainer {
     gap: 19px;
     @include flex-column;
 }
@@ -217,14 +221,14 @@ a {
         justify-self: center;
     }
 }
-.video__picture__container {
+.video__itemsContainer {
     display: flex;
     gap: 20px;
     @media (max-width:320px) {
         display: block;
     }
 }
-.video__text__container {
+.video__textContainer {
     justify-self: center;
     align-self: center;
     gap: 4px;
@@ -255,7 +259,6 @@ a {
 .grid__container {
     display: grid;
     grid-template-columns: 350px 350px 350px;
-    padding: 0 400px 0;
     margin-top: 50px;
     row-gap: 35px;
     @include media ($breakpoint-mobile) {
@@ -277,11 +280,11 @@ a {
         }
         
 }
-.grid-elem-text-block {
+.grid-elem__textBlock {
     gap: 10px;
     @include flex-column;
 }
-.grid-elem-img {
+.grid__img {
     height: 24px;
     width: 24px;
 }
@@ -308,7 +311,7 @@ a {
     }
 }
 .traffic__container {
-    @include flex-column;
+    display: flex;
     justify-content: center;
 }
 .green__title {
@@ -394,7 +397,7 @@ span {
         align-items: center;
     }
 }
-.three__simple__ways {
+.ways__textContainer {
     display: flex;
     justify-self: center;
     justify-content: space-between;
@@ -412,9 +415,8 @@ span {
     margin-top: 50px;
     justify-self: center;
     @include flex-column;
-    min-width: 1091px;
 }
-.three__ways__title {
+.ways__title {
     font-size: 36px;
     text-align: center;
     color:$turquoise-color;
@@ -429,7 +431,7 @@ span {
        margin-top: 50px;
     }
 }
-.container__three__ways {
+.ways__titleTextContainer {
     align-self: center;
     gap: 32px;
     @include flex-column;
@@ -442,25 +444,25 @@ span {
         text-align: center;
        }
 }
-#secondary__text__two {
+#secondaryText__two {
     width: 179px;
     text-align: center;
     display: flex;
     justify-self: center;
 }
-#secondary__text__three {
+#secondaryText__three {
     width: 295px;
     text-align: center;
     display: flex;
     justify-self: center;
 }
-#secondary__text__four {
+#secondaryText__four {
     width: 218px;
     text-align: center;
     display: flex;
     justify-self: center;
 }
-#secondary__text__centered {
+#secondaryText__centered {
     margin: 0 auto;
     text-align: center;
 }
@@ -478,19 +480,24 @@ span {
         height: 150px;
     }
 }
-.container__for__title-and-button {
+.project__textContainer {
     justify-self: center;
     @include flex-column;
     gap: 48px;
 }
 
-.button__container {
+.project__btnContainer {
     display: flex;
     align-self: center;
 }
-.container__for__different__blocks {
+.business__itemsContainer {
+    gap: 48px;
+    @include flex-column;
+}
+.business__containers {
     display: flex;
     justify-self: center;
+    gap: 165px;
     @media (max-width:768px) {
         justify-self: start;
     }
@@ -566,20 +573,20 @@ span {
 #block {
     display: flex;
     align-self: center;
-    position: relative;
-    left: 30px;
-    margin-top: -110px;
+    position: absolute;
+    left: -27px;
+    top: 125px;
     @media (max-width:320px) {
         width: 60px;
     }
 }
-.dark__green__title {
+.darkGreen__title {
     color: $deep-turquoise-color;
     font-size: 24px;
     font-weight: 400;
 }
-.card__text__container {
-    padding: 20px 20px 16px 29px;
+.moneyCard__textContainer {
+    padding: 0 20px 16px 29px;
     gap: 20px;
     @include flex-column;
 }
@@ -608,7 +615,7 @@ span {
 #another__secondary__text {
     font-weight: 600;
 }
-.info__online__container {
+.infoOnline {
     display: flex;
     justify-self: center;
     gap: 84px;
@@ -618,7 +625,7 @@ span {
        justify-self: normal;
     }
 }
-.help__container {
+.infoOnline__textContainer {
     align-self: center;
     gap: 48px;
     @include flex-column;
@@ -665,17 +672,17 @@ span {
 .email::placeholder {
     color: #5a5a80;
 }
-.secondary__text__two{
+.secondaryText__two{
     color: #95A1BB;
     text-align: center;
     font-weight: 600;
 }
-.secondary__text__three {
+.secondaryText__three {
     color: $lilac-color;
     text-align: center;
     font-weight: 600;
 }
-.email__button__container {
+.email__btnContainer {
     display: flex;
     justify-content: center;
 }
@@ -711,7 +718,7 @@ li {
     height: 40px;
     border-radius: 50px;
 }
-.circle__block__container {
+.footer__iconsContainer {
     display: flex;
     gap: 16px;
         .circle__block {
@@ -757,15 +764,15 @@ li {
     text-align: center;
     color: $turquoise-color;
 }
-.cards__title__container {
+.choice__titleContainer {
     align-items: center;
     @include flex-column;
 }
-.title__text__container {
+.traffic__textContainer {
     gap: 32px;
     @include flex-column;
 }
-.container__two {
+.traffic__itemsContainer {
     gap: 48px;
     @include flex-column;
 }
@@ -773,7 +780,7 @@ li {
     @include flex-column;
     align-self: end;
     height: 256px;
-    position: relative;
+    position: absolute;
     left: 40px;
     z-index: -2;
     @media (max-width:320px) {
@@ -827,8 +834,9 @@ li {
        text-align: center;
        }
   }
-.dots__container {
+.infoOnline__container {
     display: flex;
+    position: relative;
     @media (max-width:320px) {
        display: block;
        width: 310px;
@@ -837,10 +845,10 @@ li {
 .dots__picture {
     height: 62px;
     width: 132px;
-    position: relative;
-    left: 220px;
-    margin-top: -25px;
+    position: absolute;
     z-index: -1;
+    left: -34px;
+    top: -20px;
     @media (max-width:320px) {
         display: none;
     }
