@@ -20,6 +20,9 @@ $breakpoint-mobile:320px;
 }
 .moneyCard {
     position: relative;
+    @include media ($breakpoint-mobile) {
+        margin-top: 50px;
+       }
 }
 .wrapper {
     max-width: 1000px;
@@ -28,7 +31,7 @@ $breakpoint-mobile:320px;
         max-width: 320px;
        }
 }
-.circle {
+.menuCircle {
     height: 36px;
     width: 36px;
     background-color: $orange-color;
@@ -39,13 +42,13 @@ $breakpoint-mobile:320px;
     display: flex;
     flex-direction: column;
 }
-.white__block {
+.menuCircle__block {
     height: 6px;
     width: 14px;
     background-color: $white-color;
     border-radius: 2px;
 }
-.circle__container {
+.menuCircle__container {
     align-items: center;
     gap: 2px;
     position: relative;
@@ -70,8 +73,8 @@ $breakpoint-mobile:320px;
         align-items: center;
         gap: 20px;
     }
-    @include media ($breakpoint-tablet) {
-        padding: 20px 10px 0 10px;
+       @include media (1300px) {
+        padding: 0 0 0 21px;
        }
 }
 .header__links {
@@ -82,11 +85,11 @@ $breakpoint-mobile:320px;
     text-transform: uppercase;
     letter-spacing: 0.17em;
     font-weight: 500;
-    @include media ($breakpoint-tablet) {
+       @include media (468px) {
         display: block;
        }
   }
-.header__leftBlock {
+.header__navigationContainer {
     display: flex;
     gap: 44px;
     @include media ($breakpoint-tablet) {
@@ -98,7 +101,7 @@ $breakpoint-mobile:320px;
     display: flex;
     align-items: center;
     gap: 20px;
-    @include media ($breakpoint-tablet) {
+    @include media (900px) {
        flex-direction: column;
        gap: 20px;
        }
@@ -152,6 +155,9 @@ a {
     padding: 18px 40px 17px 40px;
     font-size: 12px;
     }
+    @include media ($breakpoint-mobile) {
+        padding: 18px 20px 18px 20px;
+    }
 }
 .main__text {
     color: $lilac-color;
@@ -161,7 +167,7 @@ a {
 .main__container {
     padding: 0 180px 0 180px;
     margin-top: 104px;
-    @include media ($breakpoint-laptop) {
+    @include media (1300px) {
         padding: 0 0 0 21px;
     }
     @include media ($breakpoint-mobile) {
@@ -172,9 +178,9 @@ a {
 .common__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    @media (max-width:320px) {
-       display: block;
-    }
+    @include media ($breakpoint-mobile) {
+        display: block;
+       }
 }
 .main__itemsContainer {
     gap: 40px;
@@ -195,13 +201,17 @@ a {
     @include media ($breakpoint-tablet) {
         font-size: 25px;
        }
+       @include media (1572px) {
+        font-size: 33px;
+       }
 }
 .main__img {
     width: 723px;
     height: 579px;
-    @media (max-width:320px) {
-       display: none;
-    }
+    @include media (1253px) {
+        display: none;
+       }
+       
 }
 .choice {
     margin-top: 50px;
@@ -216,17 +226,17 @@ a {
 .video__picture {
     width: 140px;
     height: 80px;
-    @media (max-width:320px) {
+    @include media ($breakpoint-mobile) {
         display: flex;
         justify-self: center;
-    }
+       }
 }
 .video__itemsContainer {
     display: flex;
     gap: 20px;
-    @media (max-width:320px) {
+    @include media ($breakpoint-mobile) {
         display: block;
-    }
+       }
 }
 .video__textContainer {
     justify-self: center;
@@ -245,20 +255,22 @@ a {
     display: flex;
     justify-content: center;
     gap: 74px;
-    @media(max-width:1035px){
-        gap: 24px;
-    }
     @include media ($breakpoint-tablet) {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 150px 180px;
         gap: 10px;
         margin-top: 50px;
        }
-
+       @include media ($breakpoint-laptop) {
+        display: grid;
+        grid-template-columns: repeat(3,170px);
+        gap: 10px;
+       }
+       
 }
 .grid__container {
     display: grid;
-    grid-template-columns: 350px 350px 350px;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
     row-gap: 35px;
     @include media ($breakpoint-mobile) {
@@ -300,25 +312,24 @@ a {
 }
 #grid__title-three {
     position: relative;
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        left: -30px;
-        height: 27px;
-        width: 27px;
-        background: url("./assets/images/LTE#1.png") center center / cover no-repeat;
-    }
+}
+.traffic {
+    margin-top: 50px;
 }
 .traffic__container {
     display: flex;
     justify-content: center;
+    position: relative;
+    @include media ($breakpoint-mobile) {
+        display: block;
+        padding: 0 20px 0;
+    }
 }
 .green__title {
     color: $turquoise-color;
     font-size: 42px;
     @include media ($breakpoint-tablet) {
-        font-size: 36px;
+        font-size: 32px;
     }
 }
 span {
@@ -332,30 +343,19 @@ span {
     align-items: start;
     left: 106px;
     top: 17px;
-    @media (max-width:320px) {
+    @include media ($breakpoint-mobile) {
         left: 60px;
     }
 }
-.photo {
-    width: 286px;
-    height: 357px;
-    background-image: url("./assets/images/Photo.png");
-    display: flex;
-    justify-content: end;
-  
-    @include media ($breakpoint-tablet) {
-       justify-self: center;
-    }
-}
+
 .transparent__img {
-    width:142px;
-    height:156px;
-    background-image: url("./assets/images/Stacked\ Group.png");
-    display: flex;
-    align-self: end;
-    position: relative;
+    position: absolute;
     z-index: -2;
-    right: 180px;
+    right: -36px;
+    top: 251px;
+    @include media ($breakpoint-mobile) {
+        right: 0;
+    }
 }
 .container {
     display: flex;
@@ -373,14 +373,16 @@ span {
     display: flex;
     align-self: end;
     justify-content: center;
-    position: relative;
-    right: 250px;
+    position: absolute;
+    right: 170px;
+    top: 320px;
     border-radius: 8px;
     &:hover {
         box-shadow: -11px 16px 25px 0 rgba(19, 194, 150, 0.24);
     }
     @include media ($breakpoint-mobile) {
         right: 0;
+        left: 20px;
     }
 }
 .arrow__img {
@@ -397,31 +399,35 @@ span {
         align-items: center;
     }
 }
+.ways {
+    margin-top: 50px;
+}
 .ways__textContainer {
     display: flex;
     justify-self: center;
-    justify-content: space-between;
+    gap: 140px;
     margin-top: 48px;
-    @media (max-width:320px) {
+    
+    @include media (989px) {
         display: grid;
         grid-template-columns: 1fr;
-
-    }
-    @media (max-width:768px) {
-        gap: 50px;
+        gap: 30px;
     }
 }
-.three__simple__ways__container {
+.ways__container {
     margin-top: 50px;
     justify-self: center;
     @include flex-column;
+    @include media ($breakpoint-mobile) {
+        padding: 0 20px 0;
+    }
 }
 .ways__title {
     font-size: 36px;
     text-align: center;
     color:$turquoise-color;
-    @include media ($breakpoint-mobile) {
-        font-size: 21px;
+    @include media (405px) {
+        font-size: 19px;
     }
    
 }
@@ -475,10 +481,15 @@ span {
 .img {
     display: flex;
     justify-self: center;
-    @media (max-width:320px) {
-        width: 320px;
-        height: 150px;
+    @include media (1203px) {
+        width: 700px;
     }
+    @include media (700px) {
+        width: 320px;
+    }
+}
+.project {
+    margin-top: 50px;
 }
 .project__textContainer {
     justify-self: center;
@@ -490,6 +501,9 @@ span {
     display: flex;
     align-self: center;
 }
+.business {
+    margin-top: 50px;
+}
 .business__itemsContainer {
     gap: 48px;
     @include flex-column;
@@ -498,28 +512,37 @@ span {
     display: flex;
     justify-self: center;
     gap: 165px;
-    @media (max-width:768px) {
-        justify-self: start;
-    }
-    @media (max-width:320px) {
+    @include media (634px) {
         display: block;
     }
 }
+.description {
+    color: $lilac-color;
+    font-weight: 600;
+}
 .card {
-    height: 414px;
     width: 260px;
     background-color: $white-color;
     border-radius: 0 0 10px 10px;
+}
+.card__percent {
+    font-weight: 500;
+    font-size: 14px;
 }
 .lilac__block {
     background-color: #516EA9;
     width: 130px;
     height: 65px;
     border-radius: 10px;
-    position: relative;
+    position: absolute;
     top: 250px;
-    right: 10px;
+    left: 250px;
     z-index: -1;
+    @include media (1140px) {
+        top: 120px;
+        left: 130px;
+        z-index: 1;
+       }
 }
 .lilac__container {
     align-items: center;
@@ -545,13 +568,13 @@ span {
     display: flex;
     gap: 42px;
 }
-.light__gray__text {
+.lightGray__text {
     color: #98A4AF;
     text-transform: uppercase;
     font-size: 10px;
     letter-spacing: 0.05em;
 }
-.dark__gray__text {
+.darkGray__text {
     color: #637381;
     font-size: 12px;
 }
@@ -562,6 +585,8 @@ span {
     height: 60px;
     width: 60px;
     right: 0;
+    top: 0;
+    position: relative;
     &:hover {
         box-shadow: -11px 16px 25px 0 rgba(19, 194, 150, 0.24);
     }
@@ -593,36 +618,53 @@ span {
 .card__img {
     height: 36px;
     width: 36px;
-    @include media ($breakpoint-mobile) {
-        justify-content: center;
+    @include media (441px) {
+        justify-self: center;
+        display: flex;
     }
 }
 .feature__title {
     color: $turquoise-color;
     font-weight: 700;
     letter-spacing: 0.01em;
+    @include media (441px) {
+        text-align: center;
+    }
 }
-.another__green__title {
+.business__title {
     font-size: 26px;
     color: $turquoise-color;
+    @include media (924px) {
+        text-align: center;
+    }
 }
 .features__container {
     display: flex;
-    @media (max-width:320px) {
+    gap: 50px;
+    @include media (441px) {
         display: block;
     }
 }
 #another__secondary__text {
     font-weight: 600;
 }
+.info {
+    margin-top: 50px;
+}
 .infoOnline {
     display: flex;
     justify-self: center;
-    gap: 84px;
+    gap: 32px;
     @media (max-width:320px) {
        display: grid;
        grid-template-columns: 1fr;
        justify-self: normal;
+    }
+    @include media ($breakpoint-mobile) {
+        
+    }
+    @include media (923px) {
+        display: block;
     }
 }
 .infoOnline__textContainer {
@@ -631,23 +673,26 @@ span {
     @include flex-column;
 }
 .email__section {
-    height: 497px;
+    margin-top: 50px;
     display: flex;
-    justify-self: center;
     align-items: center;
 }
 .email__container {
-    height: 324px;
-    width: 940px;
+    padding: 50px 156px 52px 156px;
     background-color: #181A50;
     justify-self: center;
     border-radius: 5px;
-    padding: 50px 0 0 0;
     gap: 20px;
     @include flex-column;
-    @media (max-width:320px) {
-        width: 320px;
+    @include media ($breakpoint-mobile) {
+        max-width: 314px;
         height: 400px;
+    }
+    @include media ($breakpoint-tablet) {
+        padding: 0 90px 0;
+    }
+    @include media ($breakpoint-laptop) {
+        width: 600px;
     }
 }
 .orange__title {
@@ -665,9 +710,9 @@ span {
     background-color: $navy-violet-color;
     border: 1px solid $navy-violet-color;
     border-radius: 5px;
-    @media (max-width:320px) {
+    @include media ($breakpoint-mobile) {
         width: 180px;
-    }
+       }
 }
 .email::placeholder {
     color: #5a5a80;
@@ -695,7 +740,7 @@ span {
 li {
     list-style: none;
 }
-.white__list {
+.footer__list {
     color: $white-color;
     gap: 16px;
     @include flex-column;
@@ -756,7 +801,7 @@ li {
         color: #8D8D8D;
     }
     @include media ($breakpoint-tablet) {
-        padding: 0 0 20px;
+        padding: 100px 0 20px;
        }
 }
 .choice__title {
@@ -781,11 +826,11 @@ li {
     align-self: end;
     height: 256px;
     position: absolute;
-    left: 40px;
+    left: -80px;
     z-index: -2;
-    @media (max-width:320px) {
+    @include media ($breakpoint-mobile) {
         display: none;
-    }
+       }
 }
 .navy__figure {
     width: 120px;
@@ -807,12 +852,12 @@ li {
 }
 .img__container {
     display: flex;
-    @media (max-width:320px) {
+    @include media ($breakpoint-mobile) {
         display: block;
         width: 310px;
-    }
+       }
 }
-.footer__list {
+.footer__listContainer {
     display: flex;
     justify-content: space-between;
     @include media ($breakpoint-tablet) {
@@ -837,10 +882,10 @@ li {
 .infoOnline__container {
     display: flex;
     position: relative;
-    @media (max-width:320px) {
-       display: block;
-       width: 310px;
-    }
+    @include media ($breakpoint-mobile) {
+        display: block;
+        width: 310px;
+       }
 }
 .dots__picture {
     height: 62px;
@@ -849,9 +894,9 @@ li {
     z-index: -1;
     left: -34px;
     top: -20px;
-    @media (max-width:320px) {
+    @include media ($breakpoint-mobile) {
         display: none;
-    }
+       }
 }
 .dots__picture__two {
     height: 62px;
@@ -862,17 +907,17 @@ li {
     top: 30px;
     right: 25px;
     z-index: -1;
-    @media (max-width:320px) {
+    @include media ($breakpoint-mobile) {
         display: none;
-    }
+       }
 }
 .bitmap {
     height: 422px;
     width: 375px;
-    @media (max-width:320px) {
+    @include media ($breakpoint-mobile) {
         height: 320px;
         width: 310px;
-    }
+       }
 }
 .title__number {
     font-weight: 700;
