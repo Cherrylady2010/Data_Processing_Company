@@ -27,8 +27,13 @@ $breakpoint-mobile: 320px;
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
+
   @include media($breakpoint-mobile) {
     max-width: 320px;
+  }
+
+  &_max {
+    max-width: 1300px;
   }
 }
 .menuCircle {
@@ -55,10 +60,10 @@ $breakpoint-mobile: 320px;
   top: 11px;
   @include flex-column;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 79px 179px 0 179px;
   &__links {
     display: flex;
     align-items: center;
@@ -67,28 +72,21 @@ $breakpoint-mobile: 320px;
     text-transform: uppercase;
     letter-spacing: 0.17em;
     font-weight: 500;
+    @include media($breakpoint-tablet) {
+      flex-direction: column;
+    }
   }
   &__button__container {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-direction: column;
   }
   @include media(1300px) {
     padding: 0 0 0 21px;
   }
 }
-.header__links {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  list-style: none;
-  text-transform: uppercase;
-  letter-spacing: 0.17em;
-  font-weight: 500;
-  @include media(468px) {
-    display: block;
-  }
-}
+
 .header__navigationContainer {
   display: flex;
   gap: 44px;
@@ -165,10 +163,11 @@ a {
   font-size: 19px;
 }
 .main__container {
-  padding: 0 180px 0 180px;
   margin-top: 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   @include media(1300px) {
-    padding: 0 0 0 21px;
   }
   @include media($breakpoint-mobile) {
     padding: 12px;
@@ -180,6 +179,9 @@ a {
   grid-template-columns: 1fr 1fr;
   @include media($breakpoint-mobile) {
     display: block;
+  }
+  @include media($breakpoint-laptop) {
+    grid-template-columns: 1fr;
   }
 }
 .main__itemsContainer {
@@ -208,7 +210,7 @@ a {
 .main__img {
   width: 723px;
   height: 579px;
-  @include media(1253px) {
+  @include media($breakpoint-laptop) {
     display: none;
   }
 }
@@ -253,6 +255,7 @@ a {
 .brands__container {
   display: flex;
   justify-content: center;
+  justify-items: center;
   gap: 74px;
   @include media($breakpoint-tablet) {
     display: grid;
@@ -262,8 +265,11 @@ a {
   }
   @include media($breakpoint-laptop) {
     display: grid;
-    grid-template-columns: repeat(3, 170px);
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media($breakpoint-mobile) {
+    display: flex;
+    flex-direction: column;
   }
 }
 .grid__container {
@@ -312,14 +318,23 @@ a {
 }
 .traffic {
   margin-top: 50px;
+
+  &__img {
+    @include media($breakpoint-laptop) {
+      max-height: 250px;
+      object-fit: contain;
+    }
+  }
 }
 .traffic__container {
   display: flex;
   justify-content: center;
   position: relative;
   @include media($breakpoint-mobile) {
-    display: block;
     padding: 0 20px 0;
+  }
+  @include media($breakpoint-laptop) {
+    flex-direction: column;
   }
 }
 .green__title {
@@ -680,14 +695,12 @@ span {
   gap: 20px;
   @include flex-column;
   @include media($breakpoint-mobile) {
-    max-width: 314px;
     height: 400px;
   }
   @include media($breakpoint-tablet) {
-    padding: 0 90px 0;
   }
   @include media($breakpoint-laptop) {
-    width: 600px;
+    padding: 10px;
   }
 }
 .orange__title {
@@ -725,6 +738,10 @@ span {
 .email__btnContainer {
   display: flex;
   justify-content: center;
+  input {
+    max-width: 288px;
+    width: 100%;
+  }
 }
 #button__send {
   height: 46px;
@@ -782,7 +799,7 @@ li {
   }
 }
 .footer {
-  padding: 0 248px 99px 200px;
+  margin-top: 100px;
   gap: 94px;
   @include flex-column;
   &__list {

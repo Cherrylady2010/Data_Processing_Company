@@ -10,84 +10,94 @@
     />
     <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
     <link rel="stylesheet" href="./styles.css" />
+    <!-- <link rel="stylesheet" href="./scss/basic.css" /> -->
     <link rel="stylesheet" href="./scss/basic.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__navigationContainer">
-        <div class="menuCircle">
-          <div class="menuCircle__container">
-            <div class="menuCircle__block"></div>
-            <div class="menuCircle__block"></div>
+    <header>
+      <div class="wrapper wrapper_max">
+        <div class="header">
+          <div class="header__navigationContainer">
+            <div class="menuCircle">
+              <div class="menuCircle__container">
+                <div class="menuCircle__block"></div>
+                <div class="menuCircle__block"></div>
+              </div>
+            </div>
+            <ul class="header__links">
+              <li><a href="#">about</a></li>
+              <li><a href="#">gallery</a></li>
+              <li><a href="#">pricing</a></li>
+              <li><a href="#">faq</a></li>
+              <li><a href="#">benefits</a></li>
+            </ul>
+          </div>
+          <div class="header__buttons">
+            <button class="transparent__button" id="transparent__btn">
+              sign in
+            </button>
+            <button class="orange__button">sign up</button>
           </div>
         </div>
-        <ul class="header__links">
-          <li><a href="#">about</a></li>
-          <li><a href="#">gallery</a></li>
-          <li><a href="#">pricing</a></li>
-          <li><a href="#">faq</a></li>
-          <li><a href="#">benefits</a></li>
-        </ul>
-      </div>
-      <div class="header__buttons">
-        <button class="transparent__button" id="transparent__btn">
-          sign in
-        </button>
-        <button class="orange__button">sign up</button>
       </div>
     </header>
     <main>
       <section class="main">
-        <div class="main__container">
-          <div class="common__container">
-            <div class="main__Containers">
-              <div class="main__itemsContainer">
-                <div class="main__textContainer">
-                  <h1 class="main__title">
-                    Many reasons to get up<br />
-                    and start to get back in the business
-                  </h1>
-                  <p class="main__text">
-                    The harder you work for something, the greater you’ll<br />
-                    feel when you achieve it.
-                  </p>
+        <div class="wrapper wrapper_max">
+          <div class="main__container">
+            <div class="common__container">
+              <div class="main__Containers">
+                <div class="main__itemsContainer">
+                  <div class="main__textContainer">
+                    <h1 class="main__title">
+                      Many reasons to get up<br />
+                      and start to get back in the business
+                    </h1>
+                    <p class="main__text">
+                      The harder you work for something, the greater you’ll<br />
+                      feel when you achieve it.
+                    </p>
+                  </div>
+                  <div class="header__button__container">
+                    <button class="orange__button" id="learnMore__btn">
+                      learn more
+                    </button>
+                    <button class="transparent__button">demo</button>
+                  </div>
                 </div>
-                <div class="header__button__container">
-                  <button class="orange__button" id="learnMore__btn">
-                    learn more
-                  </button>
-                  <button class="transparent__button">demo</button>
+                <div class="video__itemsContainer">
+                  <img
+                    src="./assets/images/Picture.png"
+                    alt="Picture"
+                    class="video__picture"
+                  />
+                  <div class="video__textContainer">
+                    <p class="secondary__text" id="secondary__text">
+                      The harder you work for something, the greater you’ll<br />
+                      feel when you achieve it.
+                    </p>
+                    <p class="text__preview">Watch preview</p>
+                  </div>
                 </div>
               </div>
-              <div class="video__itemsContainer">
-                <img
-                  src="./assets/images/Picture.png"
-                  alt="Picture"
-                  class="video__picture"
-                />
-                <div class="video__textContainer">
-                  <p class="secondary__text" id="secondary__text">
-                    The harder you work for something, the greater you’ll<br />
-                    feel when you achieve it.
-                  </p>
-                  <p class="text__preview">Watch preview</p>
-                </div>
-              </div>
+              <img
+                src="./assets/images/main__img.png"
+                alt="main__img"
+                class="main__img"
+              />
             </div>
-            <img
-              src="./assets/images/main__img.png"
-              alt="main__img"
-              class="main__img"
-            />
-          </div>
-          <div class="wrapper">
-            <div class="brands__container">
-              <img src="./assets/images/ProfitWell-2.png" alt="ProfitWell-2" />
-              <img src="./assets/images/Appcues-2.png" alt="Appcues-2" />
-              <img src="./assets/images/Shipbob-2.png" alt="Shipbob-2" />
-              <img src="./assets/images/Bench-2.png" alt="Bench-2" />
-              <img src="./assets/images/bubbly-2.png" alt="bubbly-2" />
-              <img src="./assets/images/demio-2.png" alt="demio-2" />
+            <div class="wrapper">
+              <div class="brands__container">
+                <img
+                  src="./assets/images/ProfitWell-2.png"
+                  alt="ProfitWell-2"
+                />
+                <img src="./assets/images/Appcues-2.png" alt="Appcues-2" />
+                <img src="./assets/images/Shipbob-2.png" alt="Shipbob-2" />
+                <img src="./assets/images/Bench-2.png" alt="Bench-2" />
+                <img src="./assets/images/bubbly-2.png" alt="bubbly-2" />
+                <img src="./assets/images/demio-2.png" alt="demio-2" />
+              </div>
             </div>
           </div>
         </div>
@@ -212,7 +222,11 @@
               </button>
             </div>
             <img src="./assets/images/Group.png" alt="Group" class="overview" />
-            <img src="./assets/images/traffic.png" alt="traffic" />
+            <img
+              class="traffic__img"
+              src="./assets/images/traffic.png"
+              alt="traffic"
+            />
             <div class="green__container">
               <img
                 src="./assets/images/Path.png"
@@ -441,7 +455,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer wrapper wrapper_max">
       <div class="footer__titleContainer">
         <h2 class="ARShakir">ARShakir</h2>
         <ul class="footer__iconsContainer">
