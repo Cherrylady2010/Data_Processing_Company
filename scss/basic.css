@@ -3,9 +3,12 @@
   font-family: "Inter";
   margin: 0;
   padding: 0;
-  border: red 1px solid;
 }
 
 body {
-  background-color: #040D3E;
+  background-color: #040d3e;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
 }/*# sourceMappingURL=basic.css.map */
